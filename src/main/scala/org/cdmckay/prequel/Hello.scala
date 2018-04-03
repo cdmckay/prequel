@@ -1,9 +1,9 @@
 package org.cdmckay.prequel
 
-object Hello extends Greeting with App {
-  println(greeting)
-}
+object Hello extends App {
 
-trait Greeting {
-  lazy val greeting: String = "hello"
+  val table = new Table[(Int, String)]
+  table.insert(1, "one")
+  table.selectAll()
+
 }
